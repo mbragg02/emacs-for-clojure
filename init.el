@@ -143,8 +143,9 @@
 
 (ac-config-default)
 
-
 (global-git-gutter-mode +1)
+
+(global-set-key (kbd "C-x g") 'magit-status)
 
 ;; Langauage-specific
 (load "setup-clojure.el")
