@@ -10,3 +10,4 @@ auto-save-list
 backups
 elpa/
 auto-generated.el
+ac-comphist.dat
