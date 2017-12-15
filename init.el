@@ -1,4 +1,12 @@
 ;;;;
+;; Auto generated config
+;;;;
+(setq custom-file (expand-file-name "auto-generated.el" user-emacs-directory))
+(when (file-exists-p custom-file)
+  (load custom-file))
+
+
+;;;;
 ;; Packages
 ;;;;
 
@@ -74,7 +82,13 @@
     tagedit
 
     ;; git integration
-    magit))
+    magit
+
+    auto-complete
+
+    git-gutter
+
+    aggressive-indent))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -150,22 +164,4 @@
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(coffee-tab-width 2)
- '(custom-safe-themes
-   (quote
-    ("7ef2884658a1fed818a11854c232511fa25721c60083a2695e6ea34ce14777ee" default)))
- '(package-selected-packages
-   (quote
-    (git-gutter markdown-mode auto-complete 4clojure aggressive-indent tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 
