@@ -88,7 +88,11 @@
 
     git-gutter
 
-    aggressive-indent))
+    aggressive-indent
+
+    neotree
+
+    feature-mode))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -114,7 +118,7 @@
 ;;
 ;; (require 'yaml-mode)
 ;; (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-;; 
+;;
 ;; Adding this code will make Emacs enter yaml mode whenever you open
 ;; a .yml file
 (add-to-list 'load-path "~/.emacs.d/vendor")
@@ -159,9 +163,16 @@
 
 (global-git-gutter-mode +1)
 
+;;; keymap for magit status popup
 (global-set-key (kbd "C-x g") 'magit-status)
+
+;;; keymap for neotree toggle
+(global-set-key [f8] 'neotree-toggle)
+
+;; On save hook to cleanup whitespace
+(add-hook 'before-save-hook 'whitespace-cleanup)
+;;(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
-

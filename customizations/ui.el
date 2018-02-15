@@ -32,7 +32,7 @@
 (load-theme 'monokai t)
 
 ;; increase font size for better readability
-(set-face-attribute 'default nil :height 140)
+(set-face-attribute 'default nil :height 120)
 
 (set-face-attribute 'region nil :background "#666")
 
